@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: advanced
+
+server :
+  port : 7070
