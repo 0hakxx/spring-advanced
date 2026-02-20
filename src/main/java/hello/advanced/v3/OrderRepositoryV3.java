@@ -1,6 +1,8 @@
-package hello.advanced.v1;
+package hello.advanced.v3;
 
-import hello.advanced.hellotrace.HelloTraceV1;
+import hello.advanced.hellotrace.HelloTraceV2;
+import hello.advanced.trace.LogTrace;
+import hello.advanced.trace.TraceId;
 import hello.advanced.trace.TraceStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -10,9 +12,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class OrderRepositoryV1 {
+public class OrderRepositoryV3 {
 
-    private final HelloTraceV1 trace;
+    private final LogTrace trace;
     public void save(String itemId)  {
         // 저장 로직
         try {

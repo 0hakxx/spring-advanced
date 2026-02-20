@@ -37,13 +37,13 @@ public class TraceId {
     }
 
     /** 다음 depth로 이동한 새로운 TraceId 생성 (id는 유지, level+1) */
-    private TraceId createNextId(String id, int level) {
-       return new TraceId(id, level+1);
+    TraceId createNextId() {
+       return new TraceId(this.id, this.level+1);
     }
 
     /** 이전 depth로 돌아간 새로운 TraceId 생성 (id는 유지, level-1) */
-    private TraceId createPreviousId(String id, int level) {
-        return new TraceId(id, level-1);
+    TraceId createPreviousId() {
+        return new TraceId(this.id, this.level-1);
     }
 
     public String getId() {
