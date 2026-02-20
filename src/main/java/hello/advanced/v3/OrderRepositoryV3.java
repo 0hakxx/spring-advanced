@@ -18,7 +18,7 @@ public class OrderRepositoryV3 {
     public void save(String itemId)  {
         // 저장 로직
         try {
-            TraceStatus status = trace.begin("OrderRepositoryV3.save()");
+            TraceStatus status = trace.begin("OrderRepositoryV4.save()");
             if ("ex".equals(itemId)) {
                 throw new IllegalStateException("예외 발생!");
             }
