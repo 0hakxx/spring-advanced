@@ -18,7 +18,7 @@ public class OrderRepositoryV4 {
         TraceTemplate<String> template = new TraceTemplate(trace) {
             @Override
             protected String call() {
-                TraceStatus status = trace.begin("OrderRepositoryV4.save()");
+                TraceStatus status = trace.begin("OrderRepositoryV5.save()");
                 if ("ex".equals(itemId)) {
                     throw new IllegalStateException("예외 발생!");
                 }
